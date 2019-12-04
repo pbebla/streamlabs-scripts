@@ -1,0 +1,154 @@
+﻿{
+    "output_file": "SlotsConfig.json",
+
+    "openReadMe": {
+        "type": "button",
+        "label": "Open Readme.txt",
+        "tooltip": "Opens the 'Readme.txt' for this script.",
+        "function": "OpenReadMe",
+        "wsevent": "",
+        "group": ""
+    },
+    "command": {
+        "type": "textbox",
+        "value": "!slots",
+        "label": "Command",
+        "tooltip": "Name of the Command",
+        "group": ""
+    },
+    "permission": {
+        "type": "dropdown",
+        "value": "Everyone",
+        "items": ["Everyone","Regular","Subscriber","Moderator"],
+        "label": "Permission level",
+        "tooltip": "Set the permission level for the command",
+        "group": ""
+    },
+    "costs": {
+        "type": "numberbox",
+        "value": "50",
+        "label": "Cost to play the game",
+        "tooltip": "Set the cost for this command.",
+        "group": ""
+    },
+    "rewardTwoSeperated": {
+        "type": "numberbox",
+        "value": "50",
+        "label": "Reward - Two Emotes (Seperated)",
+        "tooltip": "Reward for the Win - Two same Emotes seperated from each other\r\nNote: Usually only the cost is getting paid back.",
+        "group": ""
+    },
+    "rewardTwoSame": {
+        "type": "numberbox",
+        "value": "75",
+        "label": "Reward - Two Emotes",
+        "tooltip": "Reward for the Win - Two same Emotes next to each other",
+        "group": ""
+    },
+    "rewardJackpot": {
+        "type": "numberbox",
+        "value": "250",
+        "label": "Reward - Three Emotes",
+        "tooltip": "Reward for the Win - Jackpot (3 same)",
+        "group": ""
+    },
+    "rewardSuperJackpot": {
+        "type": "numberbox",
+        "value": "750",
+        "label": "Reward - Three Superjackpot Emotes",
+        "tooltip": "Reward for the Win - 3 SuperJackpot Emotes",
+        "group": ""
+    },
+    "emoteList": {
+        "type": "textbox",
+        "value": "Kappa, LUL, NotLikeThis, InuyoFace, WutFace, EleGiggle, MingLee, FeelsBadMan",
+        "label": "List of used Emotes",
+        "tooltip": "List of the Emotes you want to use. Seperate them per Comma. More Emotes = Less Chance",
+        "group": ""
+    },
+    "superEmote": {
+        "type": "textbox",
+        "value": "KappaPride",
+        "label": "Set the Super Jackpot Emote",
+        "tooltip": "Emote that triggers the Super Jackpot when 3 of them.",
+        "group": ""
+    },
+    "useCooldown": {
+        "type": "checkbox",
+        "value": true,
+        "label": "Use Cooldown Messages",
+        "tooltip": "Enable/Disable cooldown messages",
+        "group": "Cooldown"
+    },
+    "cooldown": {
+        "type": "numberbox",
+        "label": "Cooldown (seconds)",
+        "value": 120,
+        "tooltip": "Cooldown in seconds.",
+        "group": "Cooldown"
+    },
+    "onCooldown": {
+        "type": "textbox",
+        "value": "$user, the command is still on cooldown for $cd seconds!",
+        "label": "Cooldown Response",
+        "tooltip": "The message that the bot will display when the command is on cooldown. \r\n {0} = user \r\n {1} = time remaining",
+        "group": "Cooldown"
+    },
+    "userCooldown": {
+        "type": "numberbox",
+        "label": "User Cooldown (seconds)",
+        "value": 120,
+        "tooltip": "User cooldown in seconds.",
+        "group": "Cooldown"
+    },
+    "onUserCooldown": {
+        "type": "textbox",
+        "value": "$user the command is still on user cooldown for $cd seconds!",
+        "label": "User Cooldown Response",
+        "tooltip": "The message that the bot will display when the command is on user cooldown. \r\n {0} = user \r\n {1} = time remaining",
+        "group": "Cooldown"
+    },
+
+    "responseNotEnoughPoints": {
+        "type": "textbox",
+        "value": "It seems $user doesn't have $cost $currency to play the game.",
+        "label": "Not enough points",
+        "tooltip": "Message that will be posted if the user loses.\r\n$slots = 3 Rolled Emotes\r\n $user = Username\r\n$reward = Points he earned or lost.\r\n$currency = Name of Currency\r\n$cost = Cost to play",
+        "group": "Response Messages"
+    },
+    "responseLost": {
+        "type": "textbox",
+        "value": "$user pulls the lever and waits for the roll .... [ $slots ] You lost. LUL",
+        "label": "No Combination - Lost",
+        "tooltip": "Message that will be posted if the user loses.\r\n$slots = 3 Rolled Emotes\r\n $user = Username\r\n$reward = Points he earned or lost.\r\n$currency = Name of Currency\r\n$cost = Cost to play",
+        "group": "Response Messages"
+    },
+    "responseReroll": {
+        "type": "textbox",
+        "value": "$user pulls the lever and waits for the roll .... [ $slots ] You at least got your points back?!",
+        "label": "Combination - Two Emotes (seperated)",
+        "tooltip": "Message that will be posted with 2 Emotes but seperated (e.g.: X O X).\r\n$slots = 3 Rolled Emotes\r\n $user = Username\r\n$reward = Points he earned or lost.\r\n$currency = Name of Currency\r\n$cost = Cost to play",
+        "group": "Response Messages"
+    },
+    "responseWon": {
+        "type": "textbox",
+        "value": "$user pulls the lever and waits for the roll .... [ $slots ] Even a small win is a win.. ",
+        "label": "Combination - Two Emotes",
+        "tooltip": "Message that will be posted with 2 Emotes together (e.g.: X X O).\r\n$slots = 3 Rolled Emotes\r\n $user = Username\r\n$reward = Points he earned or lost.\r\n$currency = Name of Currency\r\n$cost = Cost to play",
+        "group": "Response Messages"
+    },
+    "responseJackpot": {
+        "type": "textbox",
+        "value": "$user pulls the lever and waits for the roll .... [ $slots ] Jackpot, well done Sir!",
+        "label": "Combination - Three Emotes",
+        "tooltip": "Message that will be posted when he has 3 same Emotes.\r\n$slots = 3 Rolled Emotes\r\n $user = Username\r\n$reward = Points he earned or lost.\r\n$currency = Name of Currency\r\n$cost = Cost to play",
+        "group": "Response Messages"
+    },
+    "responseSuperJackpot": {
+        "type": "textbox",
+        "value": "$user pulls the lever and waits for the roll .... [  $slots ] SUPER JACKPOT! YOU ARE THE MVP SeemsGood",
+        "label": "Combination - Three Superjackpot Emotes",
+        "tooltip": "Message that will be posted when he has 3 super Emotes.\r\n$slots = 3 Rolled Emotes\r\n $user = Username\r\n$reward = Points he earned or lost.\r\n$currency = Name of Currency\r\n$cost = Cost to play",
+        "group": "Response Messages"
+    }
+}

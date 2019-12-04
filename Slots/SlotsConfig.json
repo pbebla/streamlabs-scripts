@@ -1,0 +1,22 @@
+﻿{
+  "command": "!slots",
+  "permission": "Everyone",
+  "costs": 25,
+  "rewardTwoSeperated": 75,
+  "rewardTwoSame": 75,
+  "rewardJackpot": 4000,
+  "rewardSuperJackpot": 0,
+  "emoteList": "CynaKappa, CynaRage, HarryAuditore, HermFace, Hweur!, MVHagrid, NearlyThere, OhShame, OnceAgain, PleaseStopThat, ResidentLupin, Snape!, VeryClose",
+  "superEmote": "",
+  "useCooldown": false,
+  "cooldown": 5,
+  "onCooldown": "$user, the command is still on cooldown for $cd seconds!",
+  "userCooldown": 0,
+  "onUserCooldown": "$user , $cd more seconds!",
+  "responseNotEnoughPoints": "It seems $user doesn't have $cost $currency to play the game.",
+  "responseLost": "$slots -- $user -$reward",
+  "responseReroll": "$slots -- $user +$reward",
+  "responseWon": "$slots -- $user +$reward",
+  "responseJackpot": "$slots -- $user JACKPOT! +$reward",
+  "responseSuperJackpot": "$slots -- $user JACKPOT! +$reward"
+}
